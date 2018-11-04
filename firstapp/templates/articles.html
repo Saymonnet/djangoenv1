@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Стена</title>
+</head>
+<body>
+{% for article in articles %}
+    <h6>Дата публикации: {{ article.article_date }}</h6>
+    <h4><a href="/articles/get/{{ article.id }}"> {{ article.article_title }}</a></h4>
+    <p>{{ article.article_text }}</p>
+    <p>Понравилось: {{ article.article_likes }}</p>
+    <hr>
+{% endfor %}
+</body>
+</html>
